@@ -10,4 +10,8 @@ class Entry {
     required this.desc,
     required this.date,
   });
+
+  Map<String, dynamic> toJson() {
+    return {'id': id, 'title': title, 'desc': desc, 'date': date};
+  }
 }
