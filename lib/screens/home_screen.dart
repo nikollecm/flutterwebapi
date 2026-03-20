@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../models/entry.dart';
+import '../screens/add_entry_screen.dart';
+import '../services/entry_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -8,15 +11,59 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool _isLoading = false;
+  List<Entry> _entries = [];
+  final EntryService _entryService = EntryService();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadEntries();
+  }
+
+  void _loadEntries() async {
+    setState(() {
+      _isLoading = true;
+    });
+    final entries = await _entryService.getEntries();
+    setState(() {
+      _isLoading = false;
+      _entries = entries;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text('My Diary')),
-        body: Center(child: Text('No entries yet')),
+        body: _isLoading
+            ? Center(child: CircularProgressIndicator())
+            : ListView.builder(
+                itemCount: _entries.length,
+                itemBuilder: (context, index) {
+                  final entry = _entries[index];
+                  return ListTile(
+                    title: Text(entry.title),
+                    subtitle: Text(entry.date),
+                    onTap: () async {
+                      final result = await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AddEntryScreen(entry: entry),
+                        ),
+                      );
+                      if (result == true) {
+                        _loadEntries();
+                      }
+                    },
+                  );
+                },
+              ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/add-entry');
+          onPressed: () async {
+            await Navigator.pushNamed(context, '/add-entry');
+            _loadEntries();
           },
           child: Icon(Icons.add),
         ),
