@@ -2,7 +2,7 @@
 
 Um aplicativo de diário simples construído com Flutter para demonstrar integração com APIs REST.
 
-## 📖 Por que construí isso
+## Por que construí isso
 
 Este projeto foi criado como uma forma prática de aprender e implementar integração de Web APIs em Flutter. A ideia era construir algo funcional e útil enquanto explorava conceitos fundamentais como:
 
@@ -14,15 +14,15 @@ Este projeto foi criado como uma forma prática de aprender e implementar integr
 
 Escolhi um app de diário porque é simples o suficiente para focar no aprendizado da API, mas completo o suficiente para cobrir todas as operações CRUD.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- ✅ Criar novas entradas de diário
-- ✅ Listar todas as entradas
-- ✅ Editar entradas existentes
-- ✅ Excluir entradas (com confirmação)
-- ✅ Interface limpa e intuitiva
+- Criar novas entradas de diário
+- Listar todas as entradas
+- Editar entradas existentes
+- Excluir entradas (com confirmação)
+- Interface limpa e intuitiva
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Flutter** - Framework UI
 - **Dio** - Cliente HTTP para requisições à API
@@ -30,7 +30,7 @@ Escolhi um app de diário porque é simples o suficiente para focar no aprendiza
 - **Logger** - Logging de requisições e respostas
 - **JSON Server** - API REST mock para desenvolvimento
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 lib/
@@ -44,7 +44,7 @@ lib/
 └── main.dart               # Ponto de entrada do app
 ```
 
-## 🚀 Como executar
+## Como executar
 
 ### Pré-requisitos
 
@@ -84,7 +84,7 @@ O app consome os seguintes endpoints:
 - `PUT /entries/:id` - Atualiza uma entrada existente
 - `DELETE /entries/:id` - Exclui uma entrada
 
-## 📝 Estrutura do db.json
+## Estrutura do db.json
 
 ```json
 {
@@ -99,7 +99,7 @@ O app consome os seguintes endpoints:
 }
 ```
 
-## 🎯 Aprendizados
+## Aprendizados
 
 Durante o desenvolvimento deste projeto, aprendi:
 
@@ -110,12 +110,12 @@ Durante o desenvolvimento deste projeto, aprendi:
 5. Boas práticas de arquitetura (separação de concerns)
 6. Uso de interceptors para logging de requisições
 
-## 🔮 Próximos passos
+## Próximos passos
 
 - [ ] Implementar busca e filtros
 - [ ] Adicionar suporte offline com cache local
 - [ ] Melhorar UI/UX com animações
 
-## 📄 Licença
+## Licença
 
 Este projeto é de código aberto e está disponível para fins educacionais.
