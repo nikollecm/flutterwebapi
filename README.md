@@ -12,8 +12,6 @@ Este projeto foi criado como uma forma prática de aprender e implementar integr
 - Persistência de dados via API REST
 - Arquitetura de serviços
 
-Escolhi um app de diário porque é simples o suficiente para focar no aprendizado da API, mas completo o suficiente para cobrir todas as operações CRUD.
-
 ## Funcionalidades
 
 - Criar novas entradas de diário
@@ -83,21 +81,6 @@ O app consome os seguintes endpoints:
 - `POST /entries` - Cria uma nova entrada
 - `PUT /entries/:id` - Atualiza uma entrada existente
 - `DELETE /entries/:id` - Exclui uma entrada
-
-## Estrutura do db.json
-
-```json
-{
-  "entries": [
-    {
-      "id": "uuid-aqui",
-      "title": "Minha primeira entrada",
-      "desc": "Conteúdo da entrada...",
-      "date": "2026-03-20T10:30:00.000"
-    }
-  ]
-}
-```
 
 ## Aprendizados
 
