@@ -75,7 +75,7 @@ flutter run
 
 **Nota:** O app está configurado para usar `http://10.0.2.2:3000` (endereço localhost do emulador Android). Se estiver usando iOS ou dispositivo físico, ajuste o `baseUrl` em `lib/services/entry_service.dart`.
 
-## 🔌 API Endpoints
+## API Endpoints
 
 O app consome os seguintes endpoints:
 
