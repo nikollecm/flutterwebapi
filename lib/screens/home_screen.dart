@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/entry.dart';
 import '../screens/add_entry_screen.dart';
 import '../services/entry_service.dart';
+import '../utils/date_formatter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,7 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('My Diary')),
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              'Daily Diary',
+              style: GoogleFonts.poppins(
+                color: Colors.blue[600],
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
         body: _isLoading
             ? Center(child: CircularProgressIndicator())
             : ListView.builder(
@@ -45,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   final entry = _entries[index];
                   return ListTile(
                     title: Text(entry.title),
-                    subtitle: Text(entry.date),
+                    subtitle: Text(DateFormatter.formatDate(entry.date)),
                     onTap: () async {
                       final result = await Navigator.push(
                         context,
