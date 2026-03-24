@@ -2,7 +2,7 @@
 
 Um aplicativo de diário simples construído com Flutter para demonstrar integração com APIs REST.
 
-## Por que construí isso
+## Por que fiz esse projeto
 
 Este projeto foi criado como uma forma prática de aprender e implementar integração de Web APIs em Flutter. A ideia era construir algo funcional e útil enquanto explorava conceitos fundamentais como:
 
@@ -17,7 +17,7 @@ Este projeto foi criado como uma forma prática de aprender e implementar integr
 - Criar novas entradas de diário
 - Listar todas as entradas
 - Editar entradas existentes
-- Excluir entradas (com confirmação)
+- Excluir entradas
 - Interface limpa e intuitiva
 
 ## Tecnologias
