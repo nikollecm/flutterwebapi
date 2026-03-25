@@ -1,11 +1,8 @@
-import 'package:intl/intl.dart';
-
 class DateFormatter {
   static String formatDate(String dateString) {
     try {
       final date = DateTime.parse(dateString);
 
-      // Dias da semana em português
       final weekdays = [
         'segunda-feira',
         'terça-feira',

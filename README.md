@@ -14,16 +14,29 @@ Este projeto foi criado como uma forma prática de aprender e implementar integr
 
 ## Funcionalidades
 
+- **Bottom Navigation Bar** com 3 abas:
+  - Home: Lista de todas as entradas
+  - Adicionar: Criar nova entrada
+  - Tema: Alternar entre modo claro e escuro (padrão: claro)
+- **Suporte Offline com Cache Local**:
+  - Todas as operações funcionam offline
+  - Dados salvos localmente com SharedPreferences
+  - Sincronização automática quando online
+  - Indicador visual de status de conexão
+  - Pull-to-refresh para sincronizar manualmente
 - Criar novas entradas de diário
 - Listar todas as entradas
 - Editar entradas existentes
 - Excluir entradas
+- Tema claro/escuro com gerenciamento de estado
 - Interface limpa e intuitiva
 
 ## Tecnologias
 
 - **Flutter** - Framework UI
 - **Dio** - Cliente HTTP para requisições à API
+- **Provider** - Gerenciamento de estado para temas
+- **SharedPreferences** - Cache local para suporte offline
 - **UUID** - Geração de IDs únicos
 - **Logger** - Logging de requisições e respostas
 - **JSON Server** - API REST mock para desenvolvimento
@@ -33,13 +46,17 @@ Este projeto foi criado como uma forma prática de aprender e implementar integr
 ```
 lib/
 ├── models/
-│   └── entry.dart          # Modelo de dados da entrada
+│   └── entry.dart              # Modelo de dados da entrada
+├── providers/
+│   └── theme_provider.dart     # Provider para gerenciamento de tema
 ├── screens/
-│   ├── home_screen.dart    # Tela principal com lista de entradas
-│   └── add_entry_screen.dart # Tela de criar/editar entrada
+│   ├── main_screen.dart        # Tela principal com bottom navigation
+│   ├── home_screen.dart        # Tela com lista de entradas
+│   └── add_entry_screen.dart   # Tela de criar/editar entrada
 ├── services/
-│   └── entry_service.dart  # Serviço de comunicação com a API
-└── main.dart               # Ponto de entrada do app
+│   ├── entry_service.dart      # Serviço de comunicação com a API
+│   └── local_storage_service.dart # Serviço de cache local
+└── main.dart                   # Ponto de entrada do app
 ```
 
 ## Como executar
@@ -81,24 +98,12 @@ O app consome os seguintes endpoints:
 - `POST /entries` - Cria uma nova entrada
 - `PUT /entries/:id` - Atualiza uma entrada existente
 - `DELETE /entries/:id` - Exclui uma entrada
-
-## Aprendizados
-
-Durante o desenvolvimento deste projeto, aprendi:
-
-1. Como estruturar serviços de API em Flutter
-2. Gerenciamento de estado com StatefulWidget
-3. Navegação e passagem de dados entre telas
-4. Tratamento de operações assíncronas
-5. Boas práticas de arquitetura (separação de concerns)
-6. Uso de interceptors para logging de requisições
-
 ## Próximos passos
 
 - [ ] Implementar busca e filtros
-- [ ] Adicionar suporte offline com cache local
-- [ ] Melhorar UI/UX com animações
 
 ## Licença
 
 Este projeto é de código aberto e está disponível para fins educacionais.
+Icons from Pixel Icon Library by HackerNoon
+
