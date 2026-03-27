@@ -2,7 +2,7 @@
 
 Um aplicativo de diário simples construído com Flutter para demonstrar integração com APIs REST.
 
-## 📱 Demonstração
+## Demonstração
 
 <div align="center">
   <img src="assets/demo.gif" alt="Demonstração do App" width="300"/>
