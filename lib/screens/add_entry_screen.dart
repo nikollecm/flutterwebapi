@@ -180,6 +180,7 @@ class _AddEntryScreenState extends State<AddEntryScreen> {
   @override
   Widget build(BuildContext context) {
     final isEditing = widget.entry != null;
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
       appBar: AppBar(
@@ -188,7 +189,10 @@ class _AddEntryScreenState extends State<AddEntryScreen> {
           'assets/image/pen.svg',
           width: 24,
           height: 24,
-          colorFilter: ColorFilter.mode(Colors.black87, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(
+            isDarkMode ? Colors.white : Colors.black87,
+            BlendMode.srcIn,
+          ),
         ),
         actions: isEditing
             ? [

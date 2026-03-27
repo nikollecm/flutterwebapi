@@ -2,6 +2,13 @@
 
 Um aplicativo de diário simples construído com Flutter para demonstrar integração com APIs REST.
 
+## 📱 Demonstração
+
+<div align="center">
+  <img src="assets/demo.gif" alt="Demonstração do App" width="300"/>
+  <p><i>Demonstração das principais funcionalidades do app</i></p>
+</div>
+
 ## Por que fiz esse projeto
 
 Este projeto foi criado como uma forma prática de aprender e implementar integração de Web APIs em Flutter. A ideia era construir algo funcional e útil enquanto explorava conceitos fundamentais como:
@@ -98,12 +105,8 @@ O app consome os seguintes endpoints:
 - `POST /entries` - Cria uma nova entrada
 - `PUT /entries/:id` - Atualiza uma entrada existente
 - `DELETE /entries/:id` - Exclui uma entrada
-## Próximos passos
-
-- [ ] Implementar busca e filtros
 
 ## Licença
 
 Este projeto é de código aberto e está disponível para fins educacionais.
 Icons from Pixel Icon Library by HackerNoon
-
