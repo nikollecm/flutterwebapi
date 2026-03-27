@@ -108,5 +108,5 @@ O app consome os seguintes endpoints:
 
 ## Licença
 
-Este projeto é de código aberto e está disponível para fins educacionais.
-Icons from Pixel Icon Library by HackerNoon
+- Este projeto é de código aberto e está disponível para fins educacionais.
+- Icons from Pixel Icon Library by HackerNoon
